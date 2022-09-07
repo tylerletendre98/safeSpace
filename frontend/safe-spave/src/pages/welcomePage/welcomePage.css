@@ -1,5 +1,42 @@
-.background-image img{
+/* .welcome-page-container{
     height: 90vh;
     width: 100vw;
+} */
+
+.background-image img{
+    margin-top: -16px;
+    height: 91.5vh;
+    width: 100vw;
     position: absolute;
+}
+
+.welcome-message{
+    padding-top: 0px;
+    position: relative;
+    left: 30%;
+    top: 5vh;
+    background-color: #9c7481;
+    width: 40vw;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 13px 16px 5px 0px rgba(0,0,0,0.75);
+}
+
+.background-image-explanation h3 {
+    text-align: center;
+}
+
+.background-image-explanation h2 {
+    text-align: center;
+}
+
+.background-image-explanation{
+    top: 40vh;
+    left: 26.5%;
+    position: relative;
+    background-color: #9c7481;
+    width: 45vw;
+    padding: 20px;
+    box-shadow: 13px 16px 5px 0px rgba(0,0,0,0.75);
+    cursor: auto;
 }

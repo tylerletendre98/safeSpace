@@ -21,9 +21,18 @@ function WelcomePage() {
         </div>
     }else{
         return (
-            <div>
+            <div className='welcome-page-container'>
                 <div className='background-image'>
                     <img src={backgroundImage} alt=""/>
+                </div>
+                <div className='welcome-message'>
+                    <h3>This is safeSpace the first space social media platform!</h3>
+                    <h3>Come and talk about space, meet other space explores, or just explore yourself</h3>
+                </div>
+                <div className='background-image-explanation'>
+                    <h2>{data.title}</h2>
+                    <h3>Background image info</h3>
+                    <p>{data.explanation}</p>
                 </div>
             </div>
         )
