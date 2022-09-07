@@ -1,0 +1,27 @@
+.header-container{
+    margin-top: 0;
+  background-color: #3e3148;
+  text-align: center;
+  height: 12.5vh;
+}
+
+.header-title{ 
+    padding-top:3vh;
+    color: white;
+}
+
+.buttons-container{
+    position: absolute;
+    right: 3%;
+    top:3%
+}
+
+.buttons-container button{
+    border-radius: 5px;
+    cursor: pointer;
+    height: 3.5vh;
+    width: 7vw;
+    font-size: large;
+    border-style: none;
+}
+
