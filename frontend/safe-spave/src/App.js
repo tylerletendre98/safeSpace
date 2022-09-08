@@ -2,15 +2,21 @@ import './App.css';
 import {Routes,Route} from 'react-router-dom'
 import Header from './components/header/Header';
 import WelcomePage from './pages/welcomePage/WelcomePage';
+import LoginPage from './pages/loginPage/LoginPage';
+import { useState } from 'react';
 function App() {
+
+  const [loggingIn,setLoggingIn] = useState(false);
+
   return (
     <div className="App">
       <div className='header-container-app'>
-          <Header/>
+          <Header loggingIn={loggingIn} setLoggingIn={setLoggingIn}/>
       </div>
-      <div>
+      <div className='body'>
         <Routes>
           <Route path='/' element={<WelcomePage />}/>
+          <Route path='/loginPage' element={<LoginPage loggingIn={loggingIn} setLoggingIn={setLoggingIn} />}/>
         </Routes>
       </div>
     </div>

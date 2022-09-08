@@ -1,19 +1,42 @@
-import React from 'react'
-import './header.css'
+import React from "react";
+import "./header.css";
+import { Link } from "react-router-dom";
 
 function Header(props) {
-  return (
-    <div className='header-container'>
-        <div className='header-title'>
-            <div>
-                <h1>Welcome to Safe Space</h1>
-            </div>
-            <div className='buttons-container'>
-                <button>Login</button>
-            </div>
+  console.log(props);
+  if (props.loggingIn === false) {
+    return (
+      <div className="header-container">
+        <div className="header-title">
+          <div>
+            <h1>Welcome to Safe Space</h1>
+          </div>
+          <div className="buttons-container">
+            <Link to="/loginPage">
+              <button onClick={() => props.setLoggingIn(true)}>Login</button>
+            </Link>
+          </div>
         </div>
-    </div>
-  )
+      </div>
+    );
+  } else {
+    return (
+      <div className="header-container">
+        <div className="header-title">
+          <div>
+            <h1>Safe Space</h1>
+          </div>
+          <div className="buttons-container">
+            <Link to="/">
+              <button onClick={() => props.setLoggingIn(!props.loggingIn)}>
+                Home
+              </button>
+            </Link>
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
 
-export default Header
+export default Header;

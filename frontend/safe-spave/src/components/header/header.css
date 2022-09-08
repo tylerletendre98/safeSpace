@@ -2,7 +2,8 @@
     margin-top: 0;
   background-color: #3e3148;
   text-align: center;
-  height: 12.5vh;
+  height: 15vh;
+  margin-bottom: -20px;
 }
 
 .header-title{ 
@@ -13,7 +14,7 @@
 .buttons-container{
     position: absolute;
     right: 3%;
-    top:3%
+    top:4vh
 }
 
 .buttons-container button{

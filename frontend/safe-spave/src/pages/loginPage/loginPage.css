@@ -1,0 +1,12 @@
+.background-image img{
+    margin-top: -16px;
+    height: 91.5vh;
+    width: 100vw;
+    position: absolute;
+}
+
+.login-page-container{
+    position: relative;
+    height: 90vh;
+    width: 100vw;
+}

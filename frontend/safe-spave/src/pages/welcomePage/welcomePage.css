@@ -1,16 +1,16 @@
-/* .welcome-page-container{
+.welcome-page-container{
     height: 90vh;
     width: 100vw;
-} */
+}
 
 .background-image img{
-    margin-top: -16px;
     height: 91.5vh;
     width: 100vw;
     position: absolute;
 }
 
 .welcome-message{
+    border-radius: 5px;
     padding-top: 0px;
     position: relative;
     left: 30%;
@@ -31,7 +31,8 @@
 }
 
 .background-image-explanation{
-    top: 40vh;
+    border-radius: 5px;
+    top: 20vh;
     left: 26.5%;
     position: relative;
     background-color: #9c7481;
