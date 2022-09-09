@@ -13,8 +13,9 @@
 
 .buttons-container{
     position: absolute;
-    right: 3%;
-    top:4vh
+    top: 2.5%;
+    right: 2.5%
+    
 }
 
 .buttons-container button{

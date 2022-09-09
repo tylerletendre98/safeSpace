@@ -1,0 +1,33 @@
+.login-form-container{
+    background-color: #9c7481;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 13px 16px 5px 0px rgba(0,0,0,0.75);
+}
+
+.input-container{
+    position: relative;
+    left: 15%;
+    top: 15%;
+}
+
+.input-container label{
+    font-size: large;
+}
+
+.input-container input{
+    font-size: medium;
+    width: 70%;
+}
+
+.button-container{
+    position: relative;
+    left: 35%;
+    top: 35%;
+}
+
+.button-container button{
+    height: 25px;
+    width: 30%;
+}

@@ -1,6 +1,8 @@
 import React from "react";
 import { useState } from "react";
+import LoginForm from "../../components/loginForm/LoginForm";
 import data from "../../data/backgroundImage";
+import './loginPage.css'
 
 function LoginPage(props) {
   const [backgroundImage, setBackGroundImage] = useState(data.url);
@@ -10,7 +12,9 @@ function LoginPage(props) {
       <div className="background-image">
         <img src={backgroundImage} alt="daily background image" />
       </div>
-      <h1>this is login page</h1>
+      <div className="login-form">
+        <LoginForm/>
+      </div>
     </div>
   );
 }

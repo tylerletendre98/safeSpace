@@ -10,3 +10,11 @@
     height: 90vh;
     width: 100vw;
 }
+
+.login-form{
+    position: relative;
+    left: 30%;
+    width: 35vw;
+    height: 30vh;
+    top:20%
+}
