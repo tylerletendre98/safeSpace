@@ -6,6 +6,7 @@ function LoginForm(props) {
 
     const [username, setUsername] = useState()
     const [password, setPassword] = useState()
+    
 
   return (
     <div className='login-form-container'>
@@ -27,6 +28,9 @@ function LoginForm(props) {
         </div>
         <div className='button-container'>
             <button>Login</button>
+        </div>
+        <div className='create-account'>
+            <p onClick={()=> props.setCreatingNewAccount(!props.creatingNewAccount)}>Click here to create account</p>
         </div>
     </div>
   )

@@ -7,6 +7,7 @@ import { useState } from 'react';
 function App() {
 
   const [loggingIn,setLoggingIn] = useState(false);
+  const [creatingNewAccount, setCreatingNewAccount] = useState(false)
 
   return (
     <div className="App">
@@ -16,7 +17,10 @@ function App() {
       <div className='body'>
         <Routes>
           <Route path='/' element={<WelcomePage />}/>
-          <Route path='/loginPage' element={<LoginPage loggingIn={loggingIn} setLoggingIn={setLoggingIn} />}/>
+          <Route path='/loginPage' element={<LoginPage loggingIn={loggingIn} setLoggingIn={setLoggingIn} 
+                                                        creatingNewAccount={creatingNewAccount} 
+                                                        setCreatingNewAccount={setCreatingNewAccount}
+          />}/>
         </Routes>
       </div>
     </div>

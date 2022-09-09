@@ -24,10 +24,17 @@
 .button-container{
     position: relative;
     left: 35%;
-    top: 35%;
+    top: 30%;
 }
 
 .button-container button{
     height: 25px;
     width: 30%;
+}
+.create-account{
+    cursor: pointer;
+    position: relative;
+    left: 35%;
+    top: 37.5%;
+    font-size: large;
 }
