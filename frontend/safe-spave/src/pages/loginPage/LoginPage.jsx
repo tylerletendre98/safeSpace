@@ -3,33 +3,39 @@ import { useState } from "react";
 import CreateNewAccount from "../../components/createNewAccount/CreateNewAccount";
 import LoginForm from "../../components/loginForm/LoginForm";
 import data from "../../data/backgroundImage";
-import './loginPage.css'
+import "./loginPage.css";
 
 function LoginPage(props) {
   const [backgroundImage, setBackGroundImage] = useState(data.url);
 
-  if(props.creatingNewAccount === false){
+  if (props.creatingNewAccount === false) {
     return (
       <div className="login-page-container">
         <div className="background-image">
           <img src={backgroundImage} alt="daily background" />
         </div>
         <div className="login-form">
-          <LoginForm creatingNewAccount={props.creatingNewAccount} setCreatingNewAccount={props.setCreatingNewAccount}/>
+          <LoginForm
+            creatingNewAccount={props.creatingNewAccount}
+            setCreatingNewAccount={props.setCreatingNewAccount}
+          />
         </div>
       </div>
     );
-  }else{
-    return(
+  } else {
+    return (
       <div>
         <div className="background-image">
           <img src={backgroundImage} alt="daily background" />
         </div>
-        <div>
-          <CreateNewAccount/>
+        <div className="create-account-form">
+          <CreateNewAccount
+            creatingNewAccount={props.creatingNewAccount}
+            setCreatingNewAccount={props.setCreatingNewAccount}
+          />
         </div>
       </div>
-    )
+    );
   }
 }
 
