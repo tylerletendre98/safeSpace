@@ -18,6 +18,7 @@ function CreateNewAccount(props) {
         </div>
         <div>
           <input
+            value={username}
             type="text"
             placeholder="Enter username"
             onChange={(e) => setUsername(e.target.value)}
@@ -30,6 +31,7 @@ function CreateNewAccount(props) {
         </div>
         <div>
           <input
+            value={password}
             type="password"
             placeholder="Enter password"
             onChange={(e) => setPassword(e.target.value)}
@@ -42,6 +44,7 @@ function CreateNewAccount(props) {
         </div>
         <div>
           <input
+            value={firstName}
             type="text"
             placeholder="Enter first name"
             onChange={(e) => setFirstName(e.target.value)}
@@ -54,6 +57,7 @@ function CreateNewAccount(props) {
         </div>
         <div>
           <input
+            value={lastName}
             type="text"
             placeholder="Enter last name"
             onChange={(e) => setLastName(e.target.value)}
@@ -65,7 +69,11 @@ function CreateNewAccount(props) {
           <label htmlFor="">Date of birth:</label>
         </div>
         <div>
-          <input type="date" onChange={(e) => setDob(e.target.value)} />
+          <input
+            type="date"
+            value={dob}
+            onChange={(e) => setDob(e.target.value)}
+          />
         </div>
       </div>
       <div className="input-container">
@@ -74,6 +82,7 @@ function CreateNewAccount(props) {
         </div>
         <div>
           <input
+            value={email}
             type="email"
             placeholder="Enter email"
             onChange={(e) => setEmail(e.target.value)}
