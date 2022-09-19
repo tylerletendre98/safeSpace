@@ -1,6 +1,6 @@
-const { request } = require('express');
+
 const express = require('express');
-const { findById } = require('../models/user');
+const Post = require('../models/post')
 const router = express.Router();
 const User = require('../models/user')
 
@@ -52,31 +52,9 @@ router.put('/sendFriendRequest/:userId/:friendId', async(req,res)=>{
     try {
         const user = await User.findById(req.params.userId)
         const friend = await User.findById(req.params.friendId)
-        // searchs to see if you already send a friend request to the person
-        const filteredFriendRequests = user.friendRequests.filter(friendRequestUsername => friendRequestUsername.username === friend.username)
-        console.log(filteredFriendRequests)
-        if(filteredFriendRequests.length === 0){
-                friend.friendRequests.push(user)
-                // user.friendRequests.push(friend)
-                user.save()
-                friend.save()
-                return res.send(user)
-        }else{
-            return res.status(400).send(`Friend request already sent to ${friend.username}`)
-        }
-        // for (let i = 0; i < friend.friendRequests.length; i++) {
-        //     console.log(friend.friendRequests[i])
-        //     if(user.username !== friend.friendRequests[i].username){
-        //         friend.friendRequests.push(user)
-        //         user.friendRequests.push(friend)
-        //         user.save()
-        //         friend.save()
-        //         return res.send(user)
-        //     }else{
-        //         return res.status(400).send(`Friend request already sent to ${friend.username}`)
-        //     }
-        // }
-        
+        friend.friendRequests.push(user)
+        friend.save()
+        return res.send(user)
     } catch (ex) {
         return res.status(500).send(`Internal Server Error ${ex}.`)  
     }
@@ -84,16 +62,20 @@ router.put('/sendFriendRequest/:userId/:friendId', async(req,res)=>{
 
 router.put('/acceptFriendRequest/:userId/:requestersId', async(req,res)=>{
     try {
+    } catch (ex) {
+        return res.status(500).send(`Internal Server Error ${ex}.`)
+    }
+})
+
+router.post('/makePost/:userId', async(req,res)=>{
+    try {
         const user = await User.findById(req.params.userId)
-        const requester = await User.findById(req.params.requestersId)
-        user.friends.push(requester)
-        requester.friends.push(user)
-        const newFriendRequests = user.friendRequests.filter((friend)=> friend._id !== requester._id)
-        user.friendRequests = newFriendRequests
-        const newFriendRequestList = requester.friendRequests.filter((friend)=> friend._id !== user._id)
-        requester.friendRequests = newFriendRequestList
+        const newPost= new Post({
+            poster:user.username,
+            text:req.body.text,
+        })
+        user.posts.push(newPost)
         user.save()
-        requester.save()
         return res.send(user)
     } catch (ex) {
         return res.status(500).send(`Internal Server Error ${ex}.`)
