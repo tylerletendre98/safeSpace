@@ -74,6 +74,7 @@ router.post('/makePost/:userId', async(req,res)=>{
             poster:user.username,
             text:req.body.text,
         })
+        newPost.save()
         user.posts.push(newPost)
         user.save()
         return res.send(user)
