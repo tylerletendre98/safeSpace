@@ -16,6 +16,9 @@ function LoginPage(props) {
         </div>
         <div className="login-form">
           <LoginForm
+            login={props.login}
+            loggingIn={props.loggingIn}
+            setLoggingIn={props.setLoggingIn}
             creatingNewAccount={props.creatingNewAccount}
             setCreatingNewAccount={props.setCreatingNewAccount}
           />
