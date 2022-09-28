@@ -35,6 +35,7 @@ function LoginPage(props) {
           <CreateNewAccount
             creatingNewAccount={props.creatingNewAccount}
             setCreatingNewAccount={props.setCreatingNewAccount}
+            newUser={props.newUser}
           />
         </div>
       </div>

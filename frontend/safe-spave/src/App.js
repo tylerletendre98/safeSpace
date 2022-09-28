@@ -12,6 +12,13 @@ function App() {
   const [loggedInUser, setLoggedInUser] = useState()
   const [errorMessage, setErrorMessage] =useState()
 
+  const newUser=(newInfo)=>{
+    axios.post(`http://localhost:5000/api/users/newUser`,newInfo)
+    .then((res)=>{
+      console.log(res.data)
+    })
+  }
+
   const login = (loginInfo)=>{
       axios.post(`http://localhost:5000/api/users/login`, loginInfo)
       .then((res)=>{
@@ -35,6 +42,7 @@ function App() {
                                                         creatingNewAccount={creatingNewAccount} 
                                                         login={login}
                                                         setCreatingNewAccount={setCreatingNewAccount}
+                                                        newUser={newUser}
           />}/>
         </Routes>
       </div>
