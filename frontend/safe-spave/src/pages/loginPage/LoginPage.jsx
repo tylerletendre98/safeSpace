@@ -21,6 +21,7 @@ function LoginPage(props) {
             setLoggingIn={props.setLoggingIn}
             creatingNewAccount={props.creatingNewAccount}
             setCreatingNewAccount={props.setCreatingNewAccount}
+            errorMessage={props.errorMessage}
           />
         </div>
       </div>

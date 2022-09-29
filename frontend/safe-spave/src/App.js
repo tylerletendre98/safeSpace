@@ -3,6 +3,7 @@ import {Routes,Route} from 'react-router-dom'
 import Header from './components/header/Header';
 import WelcomePage from './pages/welcomePage/WelcomePage';
 import LoginPage from './pages/loginPage/LoginPage';
+import ProfilePage from './pages/profilePage/ProfilePage';
 import { useState } from 'react';
 import axios from 'axios';
 function App() {
@@ -22,8 +23,8 @@ function App() {
   const login = (loginInfo)=>{
       axios.post(`http://localhost:5000/api/users/login`, loginInfo)
       .then((res)=>{
-        console.log(res.data)
-        // setLoggedInUser(res.data)
+        // console.log(res.data)
+        setLoggedInUser(res.data)
       })
       .catch((err)=>{
         setErrorMessage(err.response.data)
@@ -43,7 +44,9 @@ function App() {
                                                         login={login}
                                                         setCreatingNewAccount={setCreatingNewAccount}
                                                         newUser={newUser}
+                                                        
           />}/>
+          <Route path='/profilePage' element={<ProfilePage loggedInUser={loggedInUser} errorMessage={errorMessage} />}/>
         </Routes>
       </div>
     </div>

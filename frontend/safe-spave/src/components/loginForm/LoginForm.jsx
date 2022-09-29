@@ -1,5 +1,7 @@
 import React from "react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import ProfilePage from "../../pages/profilePage/ProfilePage";
 import "./loginForm.css";
 
 function LoginForm(props) {
@@ -42,7 +44,9 @@ function LoginForm(props) {
         </div>
       </div>
       <div className="button-container">
-        <button onClick={() => loginUser()}>Login</button>
+        <Link to='/profilePage'>
+          <button onClick={() => loginUser()}>Login</button>
+        </Link>
       </div>
       <div className="create-account">
         <p
