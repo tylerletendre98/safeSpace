@@ -16,7 +16,7 @@ function App() {
   const newUser=(newInfo)=>{
     axios.post(`http://localhost:5000/api/users/newUser`,newInfo)
     .then((res)=>{
-      console.log(res.data)
+      setLoggedInUser(res.data)
     })
   }
 
@@ -34,7 +34,7 @@ function App() {
   return (
     <div className="App">
       <div className='header-container-app'>
-          <Header loggingIn={loggingIn} setLoggingIn={setLoggingIn}/>
+          <Header loggingIn={loggingIn} setLoggingIn={setLoggingIn} loggedInUser={loggedInUser}  />
       </div>
       <div className='body'>
         <Routes>

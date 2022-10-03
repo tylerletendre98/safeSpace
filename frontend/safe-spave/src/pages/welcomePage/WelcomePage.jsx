@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import "./welcomePage.css";
-// import key from '../../key'
+import key from '../../key'
 import axios from "axios";
 import data from "../../data/backgroundImage";
 
@@ -11,7 +11,7 @@ function WelcomePage() {
   // useEffect(()=>{
   //     axios.get(`https://api.nasa.gov/planetary/apod?api_key=${key.API_KEY}`)
   //     .then((res)=>{
-  //         setBackGroundImage(res.data.url)
+  //         setBackGroundImage(res.data)
   //     })
   // },[])
   if (backgroundImage === undefined) {
@@ -20,7 +20,7 @@ function WelcomePage() {
     return (
       <div className="welcome-page-container">
         <div className="background-image">
-          <img src={backgroundImage} alt="" />
+          <img src={data.url} alt="" />
         </div>
         <div className="welcome-message">
           <h3>This is safeSpace the first space social media platform!</h3>

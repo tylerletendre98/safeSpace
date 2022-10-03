@@ -14,7 +14,7 @@ function LoginForm(props) {
       password: password,
     };
     props.login(loginInfo);
-    props.setLoggingIn(!props.loggingIn);
+    props.setLoggingIn(undefined);
   };
 
   return (
