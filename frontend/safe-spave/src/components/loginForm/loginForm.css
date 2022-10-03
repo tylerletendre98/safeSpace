@@ -32,9 +32,9 @@
     width: 30%;
 }
 .create-account{
+    text-align: center;
     cursor: pointer;
     position: relative;
-    left: 22.5%;
     top: 37.5%;
     font-size: large;
 }

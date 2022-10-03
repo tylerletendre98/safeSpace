@@ -6,13 +6,13 @@ import './profilePage.css'
 function ProfilePage(props) {
     if(props.loggedInUser === undefined){
         return(
-            <div>
+            <div className='error-message-block'>
                 <div>
                     <h2>{props.errorMessage}</h2>
                 </div>
                 <div>
                     <Link to='/loginPage'> 
-                        <button onClick={()=> props.setloggingIn(true)}>Try again</button>
+                        <button>Try again</button>
                     </Link>
                 </div> 
             </div>
