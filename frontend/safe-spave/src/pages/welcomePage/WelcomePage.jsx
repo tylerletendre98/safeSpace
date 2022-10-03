@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import "./welcomePage.css";
 import key from '../../key'
 import axios from "axios";
+import { Link } from "react-router-dom";
 import data from "../../data/backgroundImage";
 
 function WelcomePage() {
@@ -19,15 +20,17 @@ function WelcomePage() {
   } else {
     return (
       <div className="welcome-page-container">
-        <div className="background-image">
-          <img src={data.url} alt="" />
-        </div>
         <div className="welcome-message">
           <h3>This is safeSpace the first space social media platform!</h3>
           <h3>
             Come and talk about space, meet other space explores, or just
             explore yourself
           </h3>
+          <div>
+            <Link to='/loginPage'>
+              <button>Login</button>
+            </Link>
+          </div>
         </div>
         <div className="background-image-explanation">
           <h2>{data.title}</h2>

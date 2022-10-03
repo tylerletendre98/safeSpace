@@ -1,6 +1,7 @@
 import React from 'react'
+import InfoBlock from '../../components/infoBlock/InfoBlock'
 import { Link } from 'react-router-dom'
-import { ReactSpinner } from 'react-spinning-wheel'
+import './profilePage.css'
 
 function ProfilePage(props) {
     if(props.loggedInUser === undefined){
@@ -11,7 +12,7 @@ function ProfilePage(props) {
                 </div>
                 <div>
                     <Link to='/loginPage'> 
-                        <button>Try again</button>
+                        <button onClick={()=> props.setloggingIn(true)}>Try again</button>
                     </Link>
                 </div> 
             </div>
@@ -19,7 +20,9 @@ function ProfilePage(props) {
     }else{
         return (
         <div>
-            <h1>{props.loggedInUser.username} </h1>
+            <div className='info-block'>
+                <InfoBlock user={props.loggedInUser} setloggedInUser={props.setloggedInUser}/>
+            </div>
         </div>
         )
     }

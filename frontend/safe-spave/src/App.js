@@ -1,11 +1,11 @@
 import './App.css';
 import {Routes,Route} from 'react-router-dom'
-import Header from './components/header/Header';
 import WelcomePage from './pages/welcomePage/WelcomePage';
 import LoginPage from './pages/loginPage/LoginPage';
 import ProfilePage from './pages/profilePage/ProfilePage';
 import { useState } from 'react';
 import axios from 'axios';
+import data from './data/backgroundImage';
 function App() {
 
   const [loggingIn,setLoggingIn] = useState(false);
@@ -33,10 +33,9 @@ function App() {
 
   return (
     <div className="App">
-      <div className='header-container-app'>
-          <Header loggingIn={loggingIn} setLoggingIn={setLoggingIn} loggedInUser={loggedInUser}  />
-      </div>
-      <div className='body'>
+      <div className="background-image">
+          <img src={data.url} alt="" height="100vh" />
+        </div>
         <Routes>
           <Route path='/' element={<WelcomePage />}/>
           <Route path='/loginPage' element={<LoginPage loggingIn={loggingIn} setLoggingIn={setLoggingIn} 
@@ -46,9 +45,8 @@ function App() {
                                                         newUser={newUser}
                                                         
           />}/>
-          <Route path='/profilePage' element={<ProfilePage loggedInUser={loggedInUser} errorMessage={errorMessage} />}/>
+          <Route path='/profilePage' element={<ProfilePage loggedInUser={loggedInUser} errorMessage={errorMessage} setLoggedInUser={setLoggedInUser}/>}/>
         </Routes>
-      </div>
     </div>
   );
 }

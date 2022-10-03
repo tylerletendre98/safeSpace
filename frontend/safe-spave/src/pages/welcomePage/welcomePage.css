@@ -1,13 +1,12 @@
+
+
 .welcome-page-container{
-    height: 90vh;
+    height: 100%;
     width: 100vw;
+    
 }
 
-.background-image img{
-    height: 91.5vh;
-    width: 100vw;
-    position: absolute;
-}
+
 
 .welcome-message{
     border-radius: 5px;
