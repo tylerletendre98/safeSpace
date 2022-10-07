@@ -1,5 +1,7 @@
 .info-block{
     position: relative;
+    width: 35%;
+    height: 20%;
 }
 
 .error-message-block{

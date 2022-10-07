@@ -34,7 +34,7 @@ function App() {
   return (
     <div className="App">
       <div className="background-image">
-          <img src={data.url} alt="" height="100vh" />
+          <img src={data.url} alt="" />
         </div>
         <Routes>
           <Route path='/' element={<WelcomePage />}/>

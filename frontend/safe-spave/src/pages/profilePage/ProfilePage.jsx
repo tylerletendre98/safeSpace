@@ -21,7 +21,7 @@ function ProfilePage(props) {
         return (
         <div>
             <div className='info-block'>
-                <InfoBlock user={props.loggedInUser} setloggedInUser={props.setloggedInUser}/>
+                <InfoBlock user={props.loggedInUser} setLoggedInUser={props.setLoggedInUser}/>
             </div>
         </div>
         )

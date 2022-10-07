@@ -20,12 +20,12 @@ function LoginForm(props) {
     <div className="login-form-container">
       <div className="input-container">
         <div>
-          <label htmlFor="">Username:</label>
+          <label htmlFor="">Username or Email:</label>
         </div>
         <div>
           <input
             type="text"
-            placeholder="Enter username"
+            placeholder="Enter username or email"
             onChange={(e) => setUsername(e.target.value)}
           />
         </div>

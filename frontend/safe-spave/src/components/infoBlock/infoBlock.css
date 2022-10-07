@@ -1,0 +1,14 @@
+.info-block-container{
+    height: 100%;
+    display: flex;
+    background-color: #9c7481;
+}
+
+.username{
+    margin-left: 5%;
+}
+
+.user-numbers{
+    margin-left: 15%;
+}
+
