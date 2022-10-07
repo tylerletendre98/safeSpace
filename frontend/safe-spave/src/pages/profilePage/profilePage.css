@@ -2,6 +2,8 @@
     position: relative;
     width: 35%;
     height: 20%;
+    left: 5%;
+    top: 7.5vh;
 }
 
 .error-message-block{
